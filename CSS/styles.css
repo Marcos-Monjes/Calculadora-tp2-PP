@@ -36,3 +36,8 @@ body{
     background-color: rgb(120, 111, 180);
     cursor: pointer;
 }
+
+.contenedor .botones.suma{
+    grid-column: 4;
+    grid-row: span 2;
+}
