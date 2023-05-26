@@ -1,6 +1,34 @@
 body{
-    
     font-family: 'Montserrat', sans-serif;
     font-family: 'Orbitron', sans-serif;
     background-color: rgb(42, 5, 63);
+}
+
+.contenedor{
+    width: 350px;
+    height: 450px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 3fr 2fr 2fr 2fr 2fr 2fr;
+    gap: 5px;   
+}
+
+.contenedor .pantalla{
+    grid-column: 1 / -1;
+    background-color: rgb(147, 41, 201);
+    font-size: 1rem;
+    display: flex;
+    text-align: right;
+}
+
+.contenedor .botones{
+    font-size: 25px;
+    background-color: indigo;
+    color: white;
+    border: 0;
+    padding: 1.5rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
