@@ -1,43 +1,56 @@
 body{
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Orbitron', sans-serif;
-    background-color: rgb(42, 5, 63);
+    background-color: rgb(171, 218, 85);
 }
 
-.contenedor{
-    width: 350px;
-    height: 450px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
-    grid-template-rows: 3fr 2fr 2fr 2fr 2fr 2fr;
-    gap: 5px;   
-}
-
-.contenedor .pantalla{
-    grid-column: 1 / -1;
-    background-color: rgb(147, 41, 201);
-    font-size: 1rem;
-    display: flex;
-    text-align: right;
-}
-
-.contenedor .botones{
-    font-size: 25px;
-    background-color: indigo;
-    color: white;
-    border: 0;
-    padding: 1.5rem .5rem;
+.contenedor {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh; 
 }
 
-.contenedor .botones:hover{
-    background-color: rgb(120, 111, 180);
+.Calculadora{
+    width: 350px;
+    display: grid;
+    grid-template-columns: repeat(4, 83px) ;
+    grid-template-rows: 160px repeat(5, 75px);
+    background-color: rgb(186, 135, 223);
+    gap: 5px;
+    padding: 15px;
+}
+
+
+.Pantalla{
+    width: 280px;
+    grid-column: 1 / -1;
+    padding: 16px;
+    display:flex;
+    margin: 10px 20px 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: rgb(85, 63, 99);
+    text-align: right;
+    justify-content: space-between;
+    word-break: break-all;
+    font-size: 1rem;
+}
+
+button{
     cursor: pointer;
+    margin: 2px;
+    padding: 0;
+    font-size: 1.5em;
+    border: none;
+    background-color: rgb(155, 94, 199);
+    color: rgb(171, 218, 85);
 }
 
-.contenedor .botones.suma{
-    grid-column: 4;
-    grid-row: span 2;
+.botonGrande {
+    grid-column: span 2;
 }
+
+button:hover{
+    background-color: rgb(117, 49, 196);
+}
+
+
