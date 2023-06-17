@@ -4,6 +4,8 @@ const igual = document.querySelector(".igual");
 const borrar_T = document.querySelector(".borrar-TODO");
 const pantalla = document.querySelector(".Pantalla");
 
+const borrar_uno = document.querySelector(".boton-borrar");
+
 let opActual = "";
 let opAnterior = "";
 let resultado = "";
@@ -47,4 +49,13 @@ igual.addEventListener("click", () => {
 
 borrar_T.addEventListener("click", () => { 
     pantalla.innerHTML = "";
+    opActual = "";      
+    opAnterior = "";   
+    resultado = "";     
+    operador = ""; 
+})
+
+borrar_uno.addEventListener("click", () =>{     
+    opActual = opActual.slice(0, -1);               
+    pantalla.innerHTML = opActual;                  
 })
