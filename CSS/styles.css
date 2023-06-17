@@ -1,5 +1,10 @@
 body{
     background-color: rgb(171, 218, 85);
+    color: rgb(185, 168, 169);
+}
+
+body:hover{
+    background-color: rgb(48, 19, 65);
 }
 
 .contenedor {
@@ -17,6 +22,8 @@ body{
     background-color: rgb(186, 135, 223);
     gap: 5px;
     padding: 15px;
+    border-radius: 25px;
+    box-shadow: 15px 10px 0px 5px #00000033;
 }
 
 
@@ -33,6 +40,12 @@ body{
     justify-content: space-between;
     word-break: break-all;
     font-size: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 10px #00000033;
+}
+
+.Pantalla:hover {
+    background-color: rgb(171, 218, 85);
 }
 
 button{
@@ -43,6 +56,8 @@ button{
     border: none;
     background-color: rgb(155, 94, 199);
     color: rgb(171, 218, 85);
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px -3px #00000048, -5px -5px 15px 3px #2512101f;
 }
 
 .botonGrande {
@@ -52,5 +67,11 @@ button{
 button:hover{
     background-color: rgb(117, 49, 196);
 }
+
+button:active {
+    background-color: rgba(161, 23, 80, 0.774);
+}
+
+
 
 
