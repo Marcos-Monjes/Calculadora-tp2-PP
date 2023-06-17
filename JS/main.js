@@ -44,3 +44,7 @@ igual.addEventListener("click", () => {
     }
     pantalla.innerHTML = resultado;
 })
+
+borrar_T.addEventListener("click", () => { 
+    pantalla.innerHTML = "";
+})
