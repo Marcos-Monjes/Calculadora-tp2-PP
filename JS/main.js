@@ -1,23 +1,46 @@
-//Codigo para efectuar los calculos
+const numeros = document.querySelectorAll(".numero");
+const operadores = document.querySelectorAll(".operador");
+const igual = document.querySelector(".igual");
+const borrar_T = document.querySelector(".borrar-TODO");
+const pantalla = document.querySelector(".Pantalla");
 
-class Calculadora {
+let opActual = "";
+let opAnterior = "";
+let resultado = "";
+let operador = "";
 
-    operadores = {
-        '+' : 'sumar',
-        '-' : 'restar',
-        'X' : 'multiplicar',
-        '%' : 'dividir'
-    };
-    sumar(n1, n2) {
-        return n1 + n2;
+
+numeros.forEach((numero) => {
+    numero.addEventListener("click", () => {
+        opActual += numero.innerHTML;
+        pantalla.innerHTML = opActual;
+    })
+})
+
+operadores.forEach((ope) => {
+    ope.addEventListener("click", () => {
+        opAnterior = opActual;
+        opActual = "";
+        operador = ope.innerHTML;
+    })
+})
+
+igual.addEventListener("click", () => {
+    switch(operador){
+        case "+":
+            resultado = parseFloat(opAnterior) + parseFloat(opActual);
+            break;
+        case "-":
+            resultado = parseFloat(opAnterior) - parseFloat(opActual);
+            break;
+        case "%":
+            resultado = parseFloat(opAnterior) / parseFloat(opActual);
+            break;
+        case "X":
+            resultado = parseFloat(opAnterior) * parseFloat(opActual);
+            break;
+        default:
+            console.log("operacion no valida")    
     }
-    restar(n1, n2) {
-        return n1 - n2;
-    }
-    dividir(n1, n2) {
-        return n1 / n2;
-    }
-    multiplicar(n1 , n2) {
-        return n1 * n2;
-    }
-}
+    pantalla.innerHTML = resultado;
+})
